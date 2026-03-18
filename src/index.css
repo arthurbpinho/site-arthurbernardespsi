@@ -33,3 +33,21 @@ body::before {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
   background-size: 180px;
 }
+
+/* Mobile responsive adjustments */
+@media (max-width: 767px) {
+  section {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+  }
+
+  section h2 {
+    margin-bottom: 16px !important;
+  }
+
+  .hero-section {
+    min-height: auto !important;
+    padding-top: 100px !important;
+    padding-bottom: 40px !important;
+  }
+}
