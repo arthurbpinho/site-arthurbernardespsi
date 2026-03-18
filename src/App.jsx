@@ -167,22 +167,10 @@ function Hero() {
       <motion.img
         src="/assets/profile2.png"
         alt=""
+        className="hero-profile-img"
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.18 }}
         transition={{ delay: 0.4, duration: 1.2 }}
-        style={{
-          position: 'absolute',
-          right: 0,
-          top: '50%',
-          transform: 'translateY(-50%)',
-          height: '85%',
-          maxHeight: 700,
-          objectFit: 'contain',
-          zIndex: 0,
-          pointerEvents: 'none',
-          maskImage: 'linear-gradient(to left, rgba(0,0,0,1) 30%, transparent 100%)',
-          WebkitMaskImage: 'linear-gradient(to left, rgba(0,0,0,1) 30%, transparent 100%)',
-        }}
       />
 
       <div style={{ position: 'relative', zIndex: 1, maxWidth: 800 }}>

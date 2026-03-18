@@ -34,6 +34,29 @@ body::before {
   background-size: 180px;
 }
 
+/* Hero profile image */
+.hero-profile-img {
+  position: absolute;
+  right: -40px;
+  bottom: 0;
+  height: 95%;
+  max-height: 820px;
+  object-fit: contain;
+  z-index: 0;
+  pointer-events: none;
+  mask-image: linear-gradient(to left, rgba(0,0,0,1) 40%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 40%, transparent 100%);
+}
+
+@media (max-width: 767px) {
+  .hero-profile-img {
+    right: -20px;
+    bottom: 0;
+    height: 60%;
+    opacity: 0.12 !important;
+  }
+}
+
 /* Mobile responsive adjustments */
 @media (max-width: 767px) {
   section {
