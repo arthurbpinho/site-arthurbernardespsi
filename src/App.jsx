@@ -612,6 +612,15 @@ export default function App() {
         <Psicoterapia />
         <Supervisao />
         <Projetos />
+        <section style={{ padding: '80px 24px', background: 'var(--bg)', position: 'relative', zIndex: 1, textAlign: 'center' }}>
+          <FadeIn>
+            <img
+              src="/assets/profile2.png"
+              alt="Arthur Bernardes"
+              style={{ maxWidth: '100%', width: 520, borderRadius: 20, objectFit: 'cover' }}
+            />
+          </FadeIn>
+        </section>
         <Contato />
       </main>
       <Footer />
