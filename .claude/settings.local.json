@@ -4,7 +4,14 @@
       "Bash(npx vite:*)",
       "Bash(git init:*)",
       "Bash(git branch:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(sudo apt:*)",
+      "Bash(curl -sL https://github.com/cli/cli/releases/latest/download/gh_2.67.0_linux_amd64.tar.gz -o /tmp/gh.tar.gz)",
+      "Bash(tar -xzf /tmp/gh.tar.gz -C /tmp/)",
+      "Read(//tmp/**)",
+      "Bash(curl -sI https://github.com/cli/cli/releases/latest)",
+      "Bash(git config:*)"
     ]
   }
 }
