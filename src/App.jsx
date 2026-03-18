@@ -163,6 +163,28 @@ function Hero() {
         transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
       />
 
+      {/* Profile image – right side, behind content */}
+      <motion.img
+        src="/assets/profile2.png"
+        alt=""
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.18 }}
+        transition={{ delay: 0.4, duration: 1.2 }}
+        style={{
+          position: 'absolute',
+          right: 0,
+          top: '50%',
+          transform: 'translateY(-50%)',
+          height: '85%',
+          maxHeight: 700,
+          objectFit: 'contain',
+          zIndex: 0,
+          pointerEvents: 'none',
+          maskImage: 'linear-gradient(to left, rgba(0,0,0,1) 30%, transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to left, rgba(0,0,0,1) 30%, transparent 100%)',
+        }}
+      />
+
       <div style={{ position: 'relative', zIndex: 1, maxWidth: 800 }}>
         {/* Badge */}
         <motion.div
@@ -612,15 +634,6 @@ export default function App() {
         <Psicoterapia />
         <Supervisao />
         <Projetos />
-        <section style={{ padding: '80px 24px', background: 'var(--bg)', position: 'relative', zIndex: 1, textAlign: 'center' }}>
-          <FadeIn>
-            <img
-              src="/assets/profile2.png"
-              alt="Arthur Bernardes"
-              style={{ maxWidth: '100%', width: 520, borderRadius: 20, objectFit: 'cover' }}
-            />
-          </FadeIn>
-        </section>
         <Contato />
       </main>
       <Footer />
