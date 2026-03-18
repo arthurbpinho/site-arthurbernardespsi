@@ -163,16 +163,6 @@ function Hero() {
         transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
       />
 
-      {/* Profile image – right side, behind content */}
-      <motion.img
-        src="/assets/profile2.png"
-        alt=""
-        className="hero-profile-img"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.18 }}
-        transition={{ delay: 0.4, duration: 1.2 }}
-      />
-
       <div style={{ position: 'relative', zIndex: 1, maxWidth: 800 }}>
         {/* Badge */}
         <motion.div
