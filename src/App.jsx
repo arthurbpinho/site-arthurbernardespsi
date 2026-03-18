@@ -7,7 +7,6 @@ import { motion, useInView, AnimatePresence } from 'framer-motion'
 const WA_BASE = 'https://wa.me/5531987577892'
 const WA_SESSION = `${WA_BASE}?text=Ol%C3%A1%20Arthur%2C%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20psicoterapia.`
 const WA_SUPERVISAO = `${WA_BASE}?text=Ol%C3%A1%20Arthur%2C%20gostaria%20de%20saber%20mais%20sobre%20supervis%C3%A3o%20cl%C3%ADnica.`
-const WA_MENTORIA = `${WA_BASE}?text=Ol%C3%A1%20Arthur%2C%20gostaria%20de%20saber%20mais%20sobre%20mentoria%20para%20psic%C3%B3logos.`
 const WA_GERAL = `${WA_BASE}?text=Ol%C3%A1%20Arthur%2C%20quero%20saber%20mais%20sobre%20seus%20servi%C3%A7os.`
 
 // ──────────────────────────────────────────────────
@@ -65,8 +64,8 @@ function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const links = ['Sobre', 'Projetos', 'Psicoterapia', 'Supervisão', 'Mentoria', 'Contato']
-  const anchors = ['#sobre', '#projetos', '#psicoterapia', '#supervisao', '#mentoria', '#contato']
+  const links = ['Sobre', 'Psicoterapia', 'Supervisão', 'Projetos', 'Contato']
+  const anchors = ['#sobre', '#psicoterapia', '#supervisao', '#projetos', '#contato']
 
   return (
     <>
@@ -458,61 +457,6 @@ function Supervisao() {
 }
 
 // ──────────────────────────────────────────────────
-// MENTORIA
-// ──────────────────────────────────────────────────
-function Mentoria() {
-  const cards = [
-    {
-      icon: '🧭', title: 'Mentoria Profissional',
-      items: ['Desenvolvimento de identidade clínica', 'Posicionamento de nicho (ex: junguiano, clínico analítico)', 'Estratégia de carreira e projetos', 'Clareza de propósito e direção profissional'],
-    },
-    {
-      icon: '📱', title: 'Acompanhamento de Mídia',
-      items: ['Criação de conteúdo científico para Instagram/YouTube', 'Estratégia de crescimento orgânico', 'Revisão e consultoria de perfil', 'Construção de autoridade digital ética'],
-    },
-  ]
-  return (
-    <section id="mentoria" style={{ padding: '100px 24px', background: 'linear-gradient(to bottom, var(--bg), #0D0D18)', position: 'relative', zIndex: 1 }}>
-      <div style={{ maxWidth: 1160, margin: '0 auto' }}>
-        <FadeIn><p style={{ fontSize: '0.75rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--teal)', marginBottom: 16, fontWeight: 500 }}>Para psicólogos</p></FadeIn>
-        <FadeIn delay={0.1}><h2 style={{ fontFamily: 'Fraunces', fontSize: 'clamp(2rem, 4vw, 3.2rem)', fontWeight: 400, lineHeight: 1.1, letterSpacing: '-0.02em', marginBottom: 16 }}>Mentoria para<br /><em>Psicólogos</em></h2></FadeIn>
-        <FadeIn delay={0.2}><p style={{ fontSize: '1.05rem', color: 'var(--text-sec)', maxWidth: 560, lineHeight: 1.7, marginBottom: 48 }}>Marketing, presença digital e posicionamento profissional. Com experiência em criação de conteúdo científico e construção de marca pessoal para psicólogos.</p></FadeIn>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24, marginBottom: 48 }}>
-          {cards.map((card, i) => (
-            <FadeIn key={card.title} delay={i * 0.12}>
-              <motion.div
-                style={{ background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 16, padding: 36, height: '100%' }}
-                whileHover={{ y: -4, borderColor: 'rgba(46,158,143,0.4)' }}
-              >
-                <div style={{ width: 48, height: 48, borderRadius: 12, background: 'var(--teal-dim)', border: '1px solid rgba(46,158,143,0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.3rem', marginBottom: 24 }}>{card.icon}</div>
-                <h3 style={{ fontFamily: 'Fraunces', fontSize: '1.3rem', fontWeight: 400, marginBottom: 20 }}>{card.title}</h3>
-                <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 12 }}>
-                  {card.items.map(item => (
-                    <li key={item} style={{ display: 'flex', alignItems: 'flex-start', gap: 10, fontSize: '0.9rem', color: 'var(--text-sec)' }}>
-                      <span style={{ color: 'var(--teal)', marginTop: 3 }}>—</span> {item}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            </FadeIn>
-          ))}
-        </div>
-        <FadeIn delay={0.3}>
-          <div style={{ textAlign: 'center' }}>
-            <motion.a href={WA_MENTORIA} target="_blank" rel="noreferrer"
-              style={{ display: 'inline-flex', alignItems: 'center', gap: 10, padding: '14px 32px', background: 'var(--teal)', color: '#fff', borderRadius: 8, fontSize: '1rem', fontWeight: 500 }}
-              whileHover={{ y: -2, boxShadow: '0 12px 32px rgba(46,158,143,0.35)' }}
-            >
-              <WhatsAppIcon /> Quero ser mentorado
-            </motion.a>
-          </div>
-        </FadeIn>
-      </div>
-    </section>
-  )
-}
-
-// ──────────────────────────────────────────────────
 // CONTATO
 // ──────────────────────────────────────────────────
 function Contato() {
@@ -665,10 +609,9 @@ export default function App() {
       <main>
         <Hero />
         <Sobre />
-        <Projetos />
         <Psicoterapia />
         <Supervisao />
-        <Mentoria />
+        <Projetos />
         <Contato />
       </main>
       <Footer />
