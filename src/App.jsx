@@ -253,7 +253,7 @@ function Sobre() {
           <FadeIn><p style={{ fontSize: '0.75rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--teal)', marginBottom: 16, fontWeight: 500 }}>Sobre mim</p></FadeIn>
           <FadeIn delay={0.1}>
             <h2 style={{ fontFamily: 'Fraunces', fontSize: 'clamp(2rem, 4vw, 3.2rem)', fontWeight: 400, lineHeight: 1.1, letterSpacing: '-0.02em', marginBottom: 32 }}>
-              Da psique à inovação —<br /><em>uma trajetória integrada.</em>
+              Psicologia e Ensino —<br /><em>uma trajetória integrada.</em>
             </h2>
           </FadeIn>
           <div style={{ width: 60, height: 1, background: 'var(--teal)', marginBottom: 32 }} />
