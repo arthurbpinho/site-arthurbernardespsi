@@ -191,7 +191,6 @@ function Hero() {
         <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.9 }}
           style={{ fontSize: 'clamp(1rem, 2vw, 1.15rem)', color: 'var(--text-sec)', lineHeight: 1.7, maxWidth: 560, margin: '0 auto 12px' }}>
           Atendimento clínico e supervisão individual com base na Psicologia Analítica de C.G. Jung.
-          Gestão com ensino, tecnologia e cuidado humano integrados.
         </motion.p>
 
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.0 }}
@@ -246,7 +245,7 @@ function HeroBtn({ href, children, primary, gold }) {
 // SOBRE
 // ──────────────────────────────────────────────────
 function Sobre() {
-  const skills = ['Psicologia Analítica', 'Supervisão Clínica', 'Tecnologia Aplicada à Saúde', 'Divulgação Científica', 'Gestão de Projetos', 'Formação em Psicologia']
+  const skills = ['Psicologia Analítica', 'Supervisão Clínica', 'Divulgação Científica', 'Gestão de Projetos', 'Formação em Psicologia']
   return (
     <section id="sobre" style={{ padding: '100px 24px', background: 'var(--bg)', position: 'relative', zIndex: 1 }}>
       <div style={{ maxWidth: 1160, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 80, alignItems: 'start' }}>
@@ -261,7 +260,6 @@ function Sobre() {
           {[
             'Psicólogo clínico graduado pela PUC Minas (2020–2024) com sólida fundamentação em Psicologia Analítica (Junguiana). Com mais de 5 anos de experiência em coordenação de grupos de estudo, supervisões, treinamentos práticos, cursos e eventos.',
             'Como cofundador da Associação Allos e idealizador da Academia Junguiana, desenvolve comunidades de aprendizado contínuo e projetos sociais/institucionais. Sua experiência abrange desde a formação livre de profissionais da psicologia até a gestão de talentos e parcerias em redes públicas e privadas, visando transformar o ensino e a prática em saúde mental.',
-            'Membro da Exyo (Venture focada em inovação na saúde) e pós-graduando no MBA em Inteligência Artificial, Gestão e Negócios (Gran Faculdade, 2025–2026). Integra o conhecimento da psicologia ao potencial da tecnologia para criar soluções éticas e escaláveis, otimizando processos de gestão e desenvolvendo novas ferramentas tecnológicas para a formação e atuação de profissionais da saúde.',
           ].map((p, i) => (
             <FadeIn key={i} delay={0.1 + i * 0.1}>
               <p style={{ color: 'var(--text-sec)', lineHeight: 1.85, marginBottom: 20, fontSize: '1rem' }}>{p}</p>
@@ -281,11 +279,9 @@ function Sobre() {
             <p style={{ fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--teal)', marginBottom: 20 }}>Formação Acadêmica</p>
             {[
               { year: '2020 – 2024', title: 'Bacharelado em Psicologia', inst: 'PUC Minas' },
-              { year: '2025 – 2026', title: 'MBA em IA, Gestão e Negócios', inst: 'Gran Faculdade · Em andamento' },
             ].map((item, i) => (
               <div key={i} style={{ display: 'flex', gap: 20, marginBottom: 24, paddingLeft: 16, position: 'relative' }}>
                 <div style={{ position: 'absolute', left: 0, top: 7, width: 6, height: 6, borderRadius: '50%', background: 'var(--teal)' }} />
-                {i === 0 && <div style={{ position: 'absolute', left: 2.5, top: 16, width: 1, height: '100%', background: 'var(--border)' }} />}
                 <span style={{ fontSize: '0.78rem', color: 'var(--teal)', whiteSpace: 'nowrap', fontWeight: 500, minWidth: 90, marginTop: 2 }}>{item.year}</span>
                 <div>
                   <strong style={{ fontSize: '0.95rem', fontWeight: 500, display: 'block', marginBottom: 2 }}>{item.title}</strong>
